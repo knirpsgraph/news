@@ -2,6 +2,7 @@ export class News {
     public news_id: number;
     public header: string;
     public text: string;
+    public username: string;
     public date: Date;
 
     constructor(news_id: number, header: string, text: string, date: Date) {
