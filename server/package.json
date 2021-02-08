@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Hany-Benjamin Nicklas",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:knirpsgraph/news.git"
+  },
+  "dependencies": {
+    "@types/express-session": "^1.15.6",
+    "@types/mysql": "^2.15.1",
+    "express": "^4.17.1",
+    "express-session": "^1.15.6",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7"
+  }
+}
