@@ -1,15 +1,18 @@
 export class News {
-    public news_id: number;
     public header: string;
-    public text: string;
     public username: string;
+    public text: string;
+    public news_id: number;
     public date: Date;
+    public time: any;
 
-    constructor(news_id: number, header: string, text: string, date: Date) {
-        this.news_id = news_id;
+    constructor(header: string, username:string, text: string, news_id: number, date: Date, time: any) {
         this.header = header;
+        this.username = username;
         this.text = text;
+        this.news_id = news_id;
         this.date = date;
+        this.time = time;
     }
 
 }

@@ -37,6 +37,7 @@ router.use(express.urlencoded({extended: false}));
 router.use(express.json());
 
 router.post("/news", addNews);
+router.get("/getNews", getNews);
 
 
 
@@ -70,4 +71,32 @@ function addNews(req: express.Request, res: express.Response):void {
     })
 
 
+}
+
+function getNews(req: express.Request, res: express.Response):void {
+
+    const query: string ="Select * FROM news;";
+
+    connection.query(query, (err: mysql.MysqlError | null, rows: any) => {
+        if (err === null) {
+
+            const news: News [] = [];
+
+            for (const row of rows) {
+                news.push( new News(
+                    row.header,
+                    row.username,
+                    row.text,
+                    row.news_id,
+                    row.date,
+                    row.time,
+                ));
+            }
+        }
+        res.status(200);
+        res.send({
+            news,
+        })
+        console.log(news)
+    })
 }
