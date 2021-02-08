@@ -43,4 +43,31 @@ router.post("/news", addNews);
 function addNews(req: express.Request, res: express.Response):void {
     //console.log for debug
     console.log(req.body)
+
+    const header: string = req.body.header;
+    const text: string = req.body.text;
+    const username: string = req.body.username
+
+    // make array data with user data
+    const data: [string, string, string] = [
+        header,
+        username,
+        text
+    ];
+
+    const query: string = "INSERT INTO news (header, username, text)" + "VALUES (?, ?, ?);";
+
+    connection.query(query, data, (err: MysqlError) => {
+        if (err) {
+            res.status(500).send({
+                message: 'Datenbankverbindung ist fehlgeschlagen',
+            })
+        } else {
+            res.status(201).send({
+                message: 'New News created'
+            })
+        }
+    })
+
+
 }

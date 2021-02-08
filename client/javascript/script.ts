@@ -2,7 +2,9 @@ import {News} from "../../server/model/mod";
 
 
 
-function addNews() {
+function addNews(event) {
+    event.preventDefault();
+
     const addNewsHeader: JQuery = $('#inputHeader');
     const addNewsText: JQuery = $('#inputText');
     const addNewUsername: JQuery = $('#inputUsername');
@@ -14,21 +16,26 @@ function addNews() {
     const NewsUsername: string = addNewUsername.val().toString().trim();
 
 
-    if (NewsUsername && NewsText && NewsHeader) {
+    if(NewsUsername && NewsText && NewsHeader) {
         $.ajax("/news", {
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify({
                 header: NewsHeader,
                 text: NewsText,
-                username: NewsUsername
-            })
-        }).then(() => {
-            renderMessage('Thanks ' + NewsUsername + ' for your contribution');
-        }).catch((response) => {
-            renderMessage(response + 'Something went wrong!:(');
+                username: NewsUsername,
+            }),
+
+            success: () => {
+                renderMessage('Thanks ' + NewsUsername + ' for your contribution');
+                setTimeout(function () {
+                    location.reload()
+                }, 2000);
+            },
         })
-    } else {
+    }
+
+    else {
         $.ajax("/news", {
             method: "POST",
             contentType: "application/json",
@@ -36,14 +43,20 @@ function addNews() {
                 header: NewsHeader,
                 text: NewsText,
                 username: 'Anonym'
-            })
-        }).then(() => {
-            renderMessage('Thanks for your contribution');
-        }).catch((response) => {
-            renderMessage(response + 'Something went wrong!:(');
+            }),
+            success: () => {
+                renderMessage('Thanks for your contribution');
+                setTimeout(function () {
+                    location.reload()
+                }, 2000);
+            },
+            error: (response) => {
+                renderMessage(response + 'Something went wrong!:(');
+            }
         })
     }
 }
+
 
 function renderMessage(message: string) {
     const messageWindow: JQuery = $('#res_Message');
@@ -75,4 +88,5 @@ $(() => {
     const addNewsForm: JQuery = $('#buttonSubmit');
 
     addNewsForm.on('click', addNews);
-})
+
+});
