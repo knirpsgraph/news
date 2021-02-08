@@ -1,7 +1,3 @@
-import {News} from "../../server/model/mod";
-
-
-
 function addNews(event) {
     event.preventDefault();
 
