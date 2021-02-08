@@ -15,21 +15,37 @@
 
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <label for="inputHeader" class="form-label">Überschrift</label>
-        <input type="text" class="form-control form-control-lg" id="inputHeader" placeholder="Überlege dir einen passenden Titel!">
-    </div>
-    <div class="row mt-3">
-        <label for="inputText" class="form-label">Was willst du der Welt mitteilen?</label>
-        <textarea class="form-control" id="inputText" rows="4" ></textarea>
-    </div>
-    <div class="row">
-        <div class="col align-self-end">
-            <label for="inputUsername" class="form-label"></label>
-            <input type="text" class="form-control form-control-sm" id="inputUsername" placeholder="Der Name hinter diesem Beitrag">
+
+<div class="container" id="renderMessage">
+    <div class="row pt-3">
+        <div class="col" id="res_Message">
+            <!-- Response Message from Server, will be inserted here-->
         </div>
     </div>
 </div>
+<form id="addNewsForm">
+    <div class="container">
+        <div class="row">
+            <label for="inputHeader" class="form-label">Überschrift</label>
+            <input type="text" class="form-control form-control-lg" id="inputHeader" placeholder="Überlege dir einen passenden Titel!">
+        </div>
+        <div class="row mt-3">
+            <label for="inputText" class="form-label">Was willst du der Welt mitteilen?</label>
+            <textarea class="form-control" id="inputText" rows="4" ></textarea>
+        </div>
+        <div class="row">
+            <div class="col align-self-end">
+                <label for="inputUsername" class="form-label"></label>
+                <input type="text" class="form-control form-control-sm" id="inputUsername" placeholder="Der Name hinter diesem Beitrag">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="input-group-prepend">
+                <button type="submit" class="btn btn-secondary" id="buttonSubmit">Eintrag veröffentlichen</button>
+            </div>
+        </div>
+    </div>
+</form>
+
 </body>
 </html>

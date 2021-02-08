@@ -1,8 +1,8 @@
 import {News} from "../../server/model/mod";
-import * as $ from 'jquery';
 
 
-function addNews(event) {
+
+function addNews() {
     const addNewsHeader: JQuery = $('#inputHeader');
     const addNewsText: JQuery = $('#inputText');
     const addNewUsername: JQuery = $('#inputUsername');
@@ -44,3 +44,35 @@ function addNews(event) {
         })
     }
 }
+
+function renderMessage(message: string) {
+    const messageWindow: JQuery = $('#res_Message');
+
+    // Create new alert
+    const newAlert: JQuery = $(`
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            ${message}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    `);
+
+
+    // Add message to DOM
+    messageWindow.append(newAlert);
+
+
+
+    // Auto-remove message after 5 seconds (5000ms)
+    setTimeout(() => {
+        newAlert.fadeOut('close');
+    }, 5000);
+}
+
+$(() => {
+
+    const addNewsForm: JQuery = $('#buttonSubmit');
+
+    addNewsForm.on('click', addNews);
+})

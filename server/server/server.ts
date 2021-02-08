@@ -1,4 +1,4 @@
-import * as mysql from "mysql"
+import * as mysql from "mysql";
 import * as express from 'express';
 
 
@@ -26,7 +26,7 @@ router.listen(8089, () => {
 });
 
 router.use("/", express.static(__dirname + "/../../client/views"));
-router.use("/bootstrap", express.static(__dirname + '/../../client/node_modules/bootstrap/dist'));
+router.use("/bootstrap", express.static(__dirname + "/../../client/node_modules/bootstrap/dist"));
 router.use("/styles", express.static(__dirname + "/../../client/css"));
 router.use("/script", express.static(__dirname + "/../../client/javascript"));
 router.use("/jquery", express.static(__dirname + "/../../client/node_modules/jquery/dist"));
@@ -35,3 +35,12 @@ router.use("/assets", express.static(__dirname + "/../../client/assets"));
 
 router.use(express.urlencoded({extended: false}));
 router.use(express.json());
+
+router.post("/news", addNews);
+
+
+
+function addNews(req: express.Request, res: express.Response):void {
+    //console.log for debug
+    console.log(req.body)
+}
