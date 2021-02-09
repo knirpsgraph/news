@@ -2,27 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>News</title>
+    <title>The Team</title>
 
-    <!-- Link to stylesheets-->
     <link rel="stylesheet" href="/styles/style_renderNews.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/font-awesome/css/all.css">
 
-    <!-- Link to Javascript -->
-    <script>var exports = {"__esModule": true};</script>
     <script src="/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/script/scriptNewsFeed.js"></script>
     <script src="/script/script.js"></script>
 </head>
-
 <header>
-    <a class="position-fixed  topLogo" href="index.html">
+    <a class="topLogo position-fixed" href="index.html">
         <img src="../assets/pic/download.png" class="d-inline-block align-top" alt="logo">
     </a>
-    <nav class="navbar navbar-expand-lg" id="mainNav">
+    <nav class="navbar navbar-expand-lg" id="mainNavIndex" style="background-color: RGBA(52, 58, 64, 0.9)">
         <div class="collapse navbar-collapse justify-content-center mt-1" id="navbarSupportedContent">
             <ul class="navbar-nav text-center mt-5">
                 <li class="nav-item">
@@ -35,7 +29,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="aboutUsDrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Über uns
                     </a>
-                    <div class="dropdown-menu bg-transparent text-center" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu bg-dark text-center" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item bg-transparent" href="#">Philosophie</a>
                         <a class="dropdown-item bg-transparent" href="#">Geschäftsführung</a>
                         <a class="dropdown-item bg-transparent" href="#">Mitarbeiter</a>
@@ -58,20 +52,27 @@
     </nav>
 </header>
 
+
+
 <body>
-
-
-<div class="container">
-
-    <video autoplay muted loop id="mainVideo">
-        <source src="assets/vid/Thick_Smoke_H264_Videvo.mp4">
-    </video>
-
-
-    <div id="newsTable">
-        <!-- News Table will inserted here -->
-    </div>
+<div class="jumbotron-fluid text-center">
+    <div class="jumbotron"><h3>Das Team</h3></div>
 </div>
+<div class="card-img text-center mb-5">
+    <img src="../assets/pic/a-team.jpg" id="teamPic" alt="das Team"/>
+</div>
+<div class="container" style="padding-bottom: 255px">
+
+
+    <p class="text-center mb-5">
+        Das A-Team (Originaltitel: The A-Team) ist eine Actionserie aus den Vereinigten Staaten von Stephen J. Cannell und Frank Lupo. Sie wurde von 1983 bis 1987 produziert und gehört zu den erfolgreichsten amerikanischen Fernsehsendungen dieses Zeitraums.[1]
+        Die Fernsehserie handelt von einer Gruppe ehemaliger Soldaten, die Menschen in Notlagen hilft – dabei aber selbst von der Militärpolizei gejagt wird.</p>
+
+    <p class="text-center ">
+        Das A-Team (Originaltitel: The A-Team) ist eine Actionserie aus den Vereinigten Staaten von Stephen J. Cannell und Frank Lupo. Sie wurde von 1983 bis 1987 produziert und gehört zu den erfolgreichsten amerikanischen Fernsehsendungen dieses Zeitraums.[1]
+        Die Fernsehserie handelt von einer Gruppe ehemaliger Soldaten, die Menschen in Notlagen hilft – dabei aber selbst von der Militärpolizei gejagt wird.</p>
+</div>
+
 <div id="footer-placeholder"></div>
 </body>
 </html>

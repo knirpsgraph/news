@@ -84,22 +84,20 @@ function renderMessage(message: string) {
 function changeArrow(event){
     const button: JQuery = $('.btn-slide-show');
 
-    for (let i = 0; i < button.length; i++) {
-        // removing class active at place i in array
-        $(button[i]).removeClass('d-none');
-    }
-    // adding class
-    $(event.currentTarget).addClass('d-none');
+        $(button).removeClass('d-none');
+        $(event.currentTarget).addClass('d-none');
+
 }
 
+
 $(() => {
+
+    $("#footer-placeholder").load("footer.html");
 
     const addNewsForm: JQuery = $('#buttonSubmit');
     const buttonDown: JQuery = $('.btn-slide-show');
 
     addNewsForm.on('click', addNews);
+    buttonDown.on('click', changeArrow)
 
-    for (let i = 0; i < buttonDown.length; i++) {
-        $(buttonDown[i]).on('click', changeArrow)
-    }
 });

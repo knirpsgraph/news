@@ -105,6 +105,7 @@ body{
 }
 #addNewsForm input{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    z-index: 0;
 }
 
 #footer_klein {
@@ -141,4 +142,39 @@ footer .icon {
         top: 5px;
         left: 2px;
     }
+}
+
+.team{
+    /* Default to hidden */
+    display: none;
+
+    /* Overlay entire screen */
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    /* A bit of padding around image */
+    padding: 1em;
+
+    /* Translucent background */
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.team:target{
+    display: block;
+}
+
+.team span {
+    /* Full width and height */
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /* Size and position background image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
