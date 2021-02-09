@@ -118,3 +118,9 @@ footer .icon {
 .flex-container-1:hover{
     background-color: RGBA(52, 58, 64, 1)
 }
+
+.topLogo{
+    top: 5px;
+    left: 15px;
+
+}
