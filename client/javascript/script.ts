@@ -84,10 +84,10 @@ function changeArrow(event){
 
     for (let i = 0; i < button.length; i++) {
         // removing class active at place i in array
-        $(button[i]).removeClass('d-sm-none');
+        $(button[i]).removeClass('d-none');
     }
     // adding class
-    $(event.currentTarget).addClass('d-sm-none');
+    $(event.currentTarget).addClass('d-none');
 }
 
 $(() => {

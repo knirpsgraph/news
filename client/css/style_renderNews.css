@@ -2,6 +2,9 @@ body{
 
 }
 
+
+/* Navbar*/
+
 #mainNav{
     padding-bottom: 60px;
 }
@@ -28,23 +31,7 @@ body{
     transform: translate(-50%, 0);
 }
 
-
-#mainVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-}
-
-.btn-slide-show {
-    font-size: 30px;
-    transform: translate(-50%, 0);
-    color: #F7F4F1;
-    position: absolute;
-    animation: wipeIt 3s infinite;
-}
+/*Btn Slide show Navbar sm */
 
 #btnSlideShowHide{
     display: none;
@@ -69,3 +56,33 @@ body{
         color: #807369;
         top: 8px;}
 }
+
+
+.btn-slide-show {
+    font-size: 30px;
+    transform: translate(-50%, 0);
+    color: #F7F4F1;
+    position: absolute;
+    animation: wipeIt 3s infinite;
+}
+
+
+
+/*Background-Video*/
+
+#mainVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+
+/* Render Message add Blogentrie*/
+
+#renderMessage{
+    height: 100px;
+}
+
