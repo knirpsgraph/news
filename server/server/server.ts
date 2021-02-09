@@ -31,6 +31,7 @@ router.use("/styles", express.static(__dirname + "/../../client/css"));
 router.use("/script", express.static(__dirname + "/../../client/javascript"));
 router.use("/jquery", express.static(__dirname + "/../../client/node_modules/jquery/dist"));
 router.use("/assets", express.static(__dirname + "/../../client/assets"));
+router.use("/font-awesome", express.static(__dirname + "/../../client/node_modules/@fortawesome/fontawesome-free"));
 
 
 router.use(express.urlencoded({extended: false}));

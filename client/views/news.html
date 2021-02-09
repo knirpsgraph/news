@@ -2,18 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>News</title>
 
     <!-- Link to stylesheets-->
     <link rel="stylesheet" href="/styles/style_renderNews.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/all.css">
 
     <!-- Link to Javascript -->
     <script>var exports = {"__esModule": true};</script>
     <script src="/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/script/scriptNewsFeed.js"></script>
+    <script src="/script/script.js"></script>
 </head>
+
+<header>
+    <nav class="navbar navbar-expand-lg" id="mainNav">
+        <a class="navbar-brand navbarBrand position-fixed" href="index.html">
+            <img src="../assets/pic/download.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
+        </a>
+        <div class="collapse navbar-collapse justify-content-center mt-1" id="navbarSupportedContent">
+            <ul class="navbar-nav text-center mt-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html">News</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutUsDrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Über uns
+                    </a>
+                    <div class="dropdown-menu bg-transparent text-center" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item bg-transparent" href="#">Philosophie</a>
+                        <a class="dropdown-item bg-transparent" href="#">Geschäftsführung</a>
+                        <a class="dropdown-item bg-transparent" href="#">Mitarbeiter</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Referenzen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="dropdown">
+                <i id="btnSlideShow" class="btn-slide-show fas fa-angle-double-down"></i>
+                <i class="btn-slide-show fas fa-angle-double-up d-sm-none "></i>
+            </a>
+        </button>
+    </nav>
+</header>
+
 <body>
 
 

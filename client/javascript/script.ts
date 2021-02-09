@@ -79,10 +79,25 @@ function renderMessage(message: string) {
     }, 5000);
 }
 
+function changeArrow(event){
+    const button: JQuery = $('.btn-slide-show');
+
+    for (let i = 0; i < button.length; i++) {
+        // removing class active at place i in array
+        $(button[i]).removeClass('d-sm-none');
+    }
+    // adding class
+    $(event.currentTarget).addClass('d-sm-none');
+}
+
 $(() => {
 
     const addNewsForm: JQuery = $('#buttonSubmit');
+    const buttonDown: JQuery = $('.btn-slide-show');
 
     addNewsForm.on('click', addNews);
 
+    for (let i = 0; i < buttonDown.length; i++) {
+        $(buttonDown[i]).on('click', changeArrow)
+    }
 });
