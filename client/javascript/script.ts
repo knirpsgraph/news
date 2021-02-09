@@ -31,7 +31,7 @@ function addNews(event) {
         })
     }
 
-    else if (NewsUsername && NewsText ){
+    else if (NewsHeader&& NewsText ){
         $.ajax("/news", {
             method: "POST",
             contentType: "application/json",

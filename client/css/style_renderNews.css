@@ -127,7 +127,7 @@ footer .icon {
     height:20%;
 }
 
-@media screen and (min-width: 1080px){
+@media screen and (min-width: 992px){
     .topLogo{
         transition: 2s;
         top: 30px;
@@ -135,10 +135,10 @@ footer .icon {
     }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 992px){
     .topLogo{
         transition: 2s;
         top: 5px;
-        left: 5px;
+        left: 2px;
     }
 }
