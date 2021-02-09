@@ -19,9 +19,9 @@ function renderNewsFeed(news: News[]) {
 
     for (let newBlog of news) {
         let newBlogEntry: JQuery = $(`
-            <div class="container mt-5 mb-5">
+            <div class="container mt-5 mb-5"  >
                 <div class="row d-flex justify-content-center">
-                    <div class="card text-center bg-transparent text-white border-0" style="width: 100%">
+                    <div class="card text-center text-white border-0" style="width: 100%; background-color:  rgba(157, 157, 168, 0.3)">
                         <div class="card-header border-white mb-2">
                             <h3 class="card-title">
                             ${newBlog.header}
@@ -30,7 +30,7 @@ function renderNewsFeed(news: News[]) {
                         <p class="card-text mt-4 mb-5">
                             ${newBlog.text}
                         </p>
-                        <div class="card-footer bg-transparent text-right text-muted text-white" >
+                        <div class="card-footer text-right text-muted text-white" >
                        <small>Uploaded: ${newBlog.date}<br>
                        by ${newBlog.username} </small>
                     </div>
