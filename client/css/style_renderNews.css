@@ -5,7 +5,7 @@ body{
 
 /* Navbar*/
 
-#mainNav{
+#mainNav, #mainNavIndex{
     padding-bottom: 60px;
 }
 
@@ -13,6 +13,12 @@ body{
       color: #F7F4F1;
   }a:hover{
     color: darkgray !important;
+   }
+
+   #mainNavIndex a {
+       color: white;
+   }a:hover{
+    color: darkgray;!important;
    }
 
 .navbarBrand{
@@ -33,9 +39,6 @@ body{
 
 /*Btn Slide show Navbar sm */
 
-#btnSlideShowHide{
-    display: none;
-}
 
 .btn-slide-show:hover{
     transition: 0.8s;
@@ -86,3 +89,32 @@ body{
     height: 100px;
 }
 
+#newsTable{
+    padding-bottom: 15%;
+}
+
+#addNewsForm{
+    padding-bottom: 15%;
+}
+
+#footer_klein {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 0;
+}
+#footer_klein a{
+    color: white;
+  }
+
+footer .icon {
+    font-size: 15px;
+}
+
+.card-body_klein{
+    background-color: RGBA(52, 58, 64, 0.8);
+}
+
+.flex-container-1:hover{
+    background-color: RGBA(52, 58, 64, 1)
+}

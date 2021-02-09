@@ -5,7 +5,9 @@
     <title>Mainpage Newsletter</title>
 
     <!-- Link to stylesheets-->
+    <link rel="stylesheet" href="/styles/style_renderNews.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/all.css">
 
     <!-- Link to Javascript -->
     <script>var exports = {"__esModule": true};</script>
@@ -16,7 +18,7 @@
 </head>
 
 <header>
-    <nav class="navbar navbar-expand-lg bg-dark" id="mainNav">
+    <nav class="navbar navbar-expand-lg" id="mainNavIndex" style="background-color: RGBA(52, 58, 64, 0.9)">
         <a class="navbar-brand navbarBrand position-fixed" href="index.html">
             <img src="../assets/pic/download.png" width="50" height="50" class="d-inline-block align-top" alt="logo">
         </a>
@@ -32,7 +34,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="aboutUsDrop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Über uns
                     </a>
-                    <div class="dropdown-menu bg-transparent text-center" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu bg-dark text-center" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item bg-transparent" href="#">Philosophie</a>
                         <a class="dropdown-item bg-transparent" href="#">Geschäftsführung</a>
                         <a class="dropdown-item bg-transparent" href="#">Mitarbeiter</a>
@@ -49,7 +51,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <a class="dropdown">
                 <i id="btnSlideShow" class="btn-slide-show fas fa-angle-double-down"></i>
-                <i class="btn-slide-show fas fa-angle-double-up d-sm-none "></i>
+                <i class="btn-slide-show fas fa-angle-double-up d-none "></i>
             </a>
         </button>
     </nav>
@@ -65,7 +67,7 @@
 </div>
 
 <form id="addNewsForm">
-    <div class="container">
+    <div class="container addNewsForm">
         <div class="row">
             <label for="inputHeader" class="form-label">Überschrift</label>
             <input type="text" class="form-control form-control-lg" id="inputHeader" placeholder="Überlege dir einen passenden Titel!">
@@ -80,7 +82,7 @@
                 <input type="text" class="form-control form-control-sm" id="inputUsername" placeholder="Der Name hinter diesem Beitrag">
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 justify-content-end">
             <div class="input-group-prepend">
                 <button type="submit" class="btn btn-secondary" id="buttonSubmit">Eintrag veröffentlichen</button>
             </div>
@@ -88,5 +90,44 @@
     </div>
 </form>
 
+
+
+<footer class="card-footer bg-dark">
+    <div class="container">
+        <div id="footer_klein">
+            <div class="flex-item">
+                <div class="flex-container-1 card-footer" >
+                    <div class="card-body_klein">
+                        <hr>
+                        <i class="fas fa-truck mb-3 icon"></i>
+                        <h6 class="card-title"><a href="">Impressum</a></h6>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="flex-container-1 card-footer ">
+                    <div class="card-body_klein">
+                        <i class="fas fa-user-friends icon"></i>
+                        <a href="">
+                            <h6 class="card-title mt-3">Rechtliche Hinweise</h6>
+                        </a>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="flex-container-1 card-footer">
+                    <div class="card-body_klein">
+                        <i class="far fa-comments icon"></i><a href="">
+                        <h6 class="card-title mt-2 mb-3">Nutzungsbedingungen</h6>
+                    </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
