@@ -19,7 +19,7 @@
 
 <header>
     <a class="topLogo position-fixed" href="index.html">
-        <img src="../assets/pic/download.png" width="75" height="75" class="d-inline-block align-top" alt="logo">
+        <img src="../assets/pic/download.png" class="d-inline-block align-top" alt="logo">
     </a>
     <nav class="navbar navbar-expand-lg" id="mainNavIndex" style="background-color: RGBA(52, 58, 64, 0.9)">
         <div class="collapse navbar-collapse justify-content-center mt-1" id="navbarSupportedContent">
@@ -59,7 +59,7 @@
 
 <body>
 <div class="container" id="renderMessage">
-    <div class="row pt-3">
+    <div class="col row pt-3">
         <div class="col" id="res_Message">
             <!-- Response Message from Server, will be inserted here-->
         </div>
@@ -68,23 +68,21 @@
 
 <form id="addNewsForm">
     <div class="container addNewsForm">
-        <div class="row">
-            <label for="inputHeader" class="form-label">Überschrift</label>
-            <input type="text" class="form-control form-control-lg" id="inputHeader" placeholder="Überlege dir einen passenden Titel!">
+        <div class="col row">
+            <label for="inputHeader" class="form-label"></label>
+            <input required type="text" class="form-control form-control-lg " id="inputHeader" placeholder="Überlege dir einen passenden Titel!">
         </div>
-        <div class="row mt-3">
+        <div class="col row mt-5">
             <label for="inputText" class="form-label">Was willst du der Welt mitteilen?</label>
             <textarea class="form-control" id="inputText" rows="4" ></textarea>
         </div>
-        <div class="row">
-            <div class="col align-self-end">
-                <label for="inputUsername" class="form-label"></label>
-                <input type="text" class="form-control form-control-sm" id="inputUsername" placeholder="Der Name hinter diesem Beitrag">
-            </div>
+        <div class="col row mt-5">
+            <label for="inputUsername" class="form-label"></label>
+            <input required type="text" class="form-control form-control-sm" id="inputUsername" placeholder="Der Name hinter diesem Beitrag">
         </div>
-        <div class="row mt-5 justify-content-end">
+        <div class="col row mt-5 justify-content-end">
             <div class="input-group-prepend">
-                <button type="submit" class="btn btn-secondary" id="buttonSubmit">Eintrag veröffentlichen</button>
+                <button type="submit" class="btn btn-secondary" id="buttonSubmit" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">Eintrag veröffentlichen</button>
             </div>
         </div>
     </div>

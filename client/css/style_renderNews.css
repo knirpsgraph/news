@@ -1,4 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
+    font-size: 16px;
+    -webkit-backdrop-filter: blur(5px);
+    -ms-filter: blur(5px);
 
 }
 
@@ -96,6 +103,9 @@ body{
 #addNewsForm{
     padding-bottom: 15%;
 }
+#addNewsForm input{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 #footer_klein {
     color: white;
@@ -105,22 +115,30 @@ body{
 }
 #footer_klein a{
     color: white;
+    cursor: pointer;
   }
 
 footer .icon {
     font-size: 15px;
 }
 
-.card-body_klein{
-    background-color: RGBA(52, 58, 64, 0.8);
+.topLogo img{
+    width:20%;
+    height:20%;
 }
 
-.flex-container-1:hover{
-    background-color: RGBA(52, 58, 64, 1)
+@media screen and (min-width: 1080px){
+    .topLogo{
+        transition: 2s;
+        top: 30px;
+        left: 25px;
+    }
 }
 
-.topLogo{
-    top: 5px;
-    left: 15px;
-
+@media screen and (max-width: 500px){
+    .topLogo{
+        transition: 2s;
+        top: 5px;
+        left: 5px;
+    }
 }

@@ -31,7 +31,7 @@ function addNews(event) {
         })
     }
 
-    else {
+    else if (NewsUsername && NewsText ){
         $.ajax("/news", {
             method: "POST",
             contentType: "application/json",
@@ -50,6 +50,8 @@ function addNews(event) {
                 renderMessage(response + 'Something went wrong!:(');
             }
         })
+    }else{
+        renderMessage('Please fill out the textforms!');
     }
 }
 
