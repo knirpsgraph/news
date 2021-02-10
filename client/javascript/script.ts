@@ -10,38 +10,25 @@ function addNews(event) {
     const NewsHeader: string = addNewsHeader.val().toString().trim();
     const NewsText: string = addNewsText.val().toString().trim();
     const NewsUsername: string = addNewUsername.val().toString().trim();
+    let uName: string;
 
-
-    if(NewsUsername && NewsText && NewsHeader) {
-        $.ajax("/news", {
-            method: "POST",
-            contentType: "application/json",
-            data: JSON.stringify({
-                header: NewsHeader,
-                text: NewsText,
-                username: NewsUsername,
-            }),
-
-            success: () => {
-                renderMessage('Thanks ' + NewsUsername + ' for your contribution');
-                setTimeout(function () {
-                    location.reload()
-                }, 2000);
-            },
-        })
+    if (NewsUsername.length != 0){
+        uName = NewsUsername;
+    } else {
+        uName = 'Anonym';
     }
-
-    else if (NewsHeader&& NewsText ){
+    if(uName && NewsText && NewsHeader) {
         $.ajax("/news", {
             method: "POST",
             contentType: "application/json",
             data: JSON.stringify({
                 header: NewsHeader,
                 text: NewsText,
-                username: 'Anonym'
+                username: uName,
             }),
+
             success: () => {
-                renderMessage('Thanks for your contribution');
+                renderMessage('Thanks ' + uName + ' for your contribution');
                 setTimeout(function () {
                     location.reload()
                 }, 2000);
@@ -50,7 +37,7 @@ function addNews(event) {
                 renderMessage(response + 'Something went wrong!:(');
             }
         })
-    }else{
+    } else{
         renderMessage('Please fill out the textforms!');
     }
 }

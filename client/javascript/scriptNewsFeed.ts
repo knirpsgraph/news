@@ -1,4 +1,4 @@
-import {News} from "../../server/model/mod";
+import {News} from "../../server/model/news";
 
 function updateNews() {
     $.ajax("/getNews", {

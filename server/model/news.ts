@@ -3,9 +3,9 @@ export class News {
     public username: string;
     public text: string;
     public news_id: number;
-    public date: Date;
+    public date: any;
 
-    constructor(header: string, username:string, text: string, news_id: number, date: Date) {
+    constructor(header: string, username:string, text: string, news_id: number, date: any) {
         this.header = header;
         this.username = username;
         this.text = text;

@@ -3,7 +3,7 @@ import * as express from 'express';
 
 
 import {Config} from "../config/config";
-import {News} from "../model/mod";
+import {News} from "../model/news";
 import {Connection, MysqlError} from "mysql";
 
 //deklariere router and connenction
@@ -74,12 +74,12 @@ function addNews(req: express.Request, res: express.Response):void {
 
 function getNews(req: express.Request, res: express.Response):void {
 
-    const query: string ="Select header, username, text, DATE_FORMAT(date, '%e.%c.%Y %H:%i') FROM news ORDER BY date DESC;";
+    const query: string ="SELECT header, username, text, DATE_FORMAT(date, '%e.%c.%Y %H:%i')date FROM news ORDER BY news_id DESC";
 
     connection.query(query, (err: mysql.MysqlError | null, rows: any) => {
         if (err === null) {
-
-            let news: News [] = [];
+console.log(query)
+            let news: News [] = []
 
             for (const row of rows) {
                 news.push( new News(
@@ -87,7 +87,7 @@ function getNews(req: express.Request, res: express.Response):void {
                     row.username,
                     row.text,
                     row.news_id,
-                    row.date,
+                    row.date
                 ));
             }
         }
@@ -96,5 +96,6 @@ function getNews(req: express.Request, res: express.Response):void {
             news,
         })
         console.log(news)
+
     })
 }
