@@ -144,37 +144,26 @@ footer .icon {
     }
 }
 
-.team{
-    /* Default to hidden */
-    display: none;
-
-    /* Overlay entire screen */
+#lightbox{
     position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    /* A bit of padding around image */
-    padding: 1em;
-
-    /* Translucent background */
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.team:target{
-    display: block;
-}
-
-.team span {
-    /* Full width and height */
-    display: block;
     width: 100%;
-    height: 100%;
+    height:  100%;
+    z-index: 999;
+    background-color: rgba(0,0,0,0.5);
+}
 
-    /* Size and position background image */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+#lightbox img {
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    top:50%;
+    left:50%;
+    height: 80%;
+    transform:translate(-50%,-50%);
+}
+
+#lightbox p {
+    text-align:right;
+    color:white;
+    margin-right:20px;
+    font-size:12px;
 }

@@ -89,15 +89,39 @@ function changeArrow(event){
 
 }
 
+function newLightbox(event){
+    event.preventDefault();
 
-$(() => {
+    const box: JQuery = $('#lightbox');
 
-    $("#footer-placeholder").load("footer.html");
+    if ($(box).length > 0) {
+        $(box).removeClass('d-none')
+    }
+    else{
+        $(box).addClass('d-none')
+    }
+}
 
-    const addNewsForm: JQuery = $('#buttonSubmit');
-    const buttonDown: JQuery = $('.btn-slide-show');
+function closeLightbox() {
+    const box: JQuery = $('#lightbox');
 
-    addNewsForm.on('click', addNews);
-    buttonDown.on('click', changeArrow)
+    $(box).hide(2)
+}
 
-});
+
+    $(() => {
+
+        $("#footer-placeholder").load("footer.html");
+
+        const addNewsForm: JQuery = $('#buttonSubmit');
+        const buttonDown: JQuery = $('.btn-slide-show');
+        const lightbox: JQuery = $('.teamPic');
+        const closelightbox: JQuery = $('.closeLightbox');
+
+        addNewsForm.on('click', addNews);
+        buttonDown.on('click', changeArrow);
+        lightbox.on('click', newLightbox);
+        closelightbox.on('click', closeLightbox);
+
+    })
+

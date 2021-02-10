@@ -70,8 +70,6 @@ function addNews(req: express.Request, res: express.Response):void {
             })
         }
     })
-
-
 }
 
 function getNews(req: express.Request, res: express.Response):void {

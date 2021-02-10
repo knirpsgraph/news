@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>The Team</title>
 
+    <!-- Link to stylesheets-->
     <link rel="stylesheet" href="/styles/style_renderNews.css">
     <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/font-awesome/css/all.css">
 
+    <!-- Link to Javascript -->
+    <script>var exports = {"__esModule": true};</script>
     <script src="/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/script/scriptNewsFeed.js"></script>
     <script src="/script/script.js"></script>
+
 </head>
 <header>
     <a class="topLogo position-fixed" href="index.html">
@@ -51,28 +55,37 @@
         </button>
     </nav>
 </header>
-
-
-
 <body>
-<div class="jumbotron-fluid text-center">
-    <div class="jumbotron"><h3>Das Team</h3></div>
+<div id="lightbox" class="d-none">
+    <a href="" class="closeLightbox">
+        <p>Click to close</p>
+    </a>
+    <div id="content">
+        <img src="../assets/pic/a-team.jpg" />
+    </div>
 </div>
-<div class="card-img text-center mb-5">
-    <img src="../assets/pic/a-team.jpg" id="teamPic" alt="das Team"/>
-</div>
-<div class="container" style="padding-bottom: 255px">
+    <div class="jumbotron-fluid text-center">
+        <div class="jumbotron"><h3>Das Team</h3></div>
+    </div>
+    <div class="card-img text-center mb-5">
+        <a href="" class="teamPic">
+            <img src="../assets/pic/a-team.jpg" class="team" alt="das Team"/>
+        </a>
+    </div>
+    <div class="container" style="padding-bottom: 255px">
 
 
-    <p class="text-center mb-5">
-        Das A-Team (Originaltitel: The A-Team) ist eine Actionserie aus den Vereinigten Staaten von Stephen J. Cannell und Frank Lupo. Sie wurde von 1983 bis 1987 produziert und gehört zu den erfolgreichsten amerikanischen Fernsehsendungen dieses Zeitraums.[1]
-        Die Fernsehserie handelt von einer Gruppe ehemaliger Soldaten, die Menschen in Notlagen hilft – dabei aber selbst von der Militärpolizei gejagt wird.</p>
+        <p class="text-center mb-5">
+            Das A-Team (Originaltitel: The A-Team) ist eine Actionserie aus den Vereinigten Staaten von Stephen J. Cannell und Frank Lupo. Sie wurde von 1983 bis 1987 produziert und gehört zu den erfolgreichsten amerikanischen Fernsehsendungen dieses Zeitraums.[1]
+            Die Fernsehserie handelt von einer Gruppe ehemaliger Soldaten, die Menschen in Notlagen hilft – dabei aber selbst von der Militärpolizei gejagt wird.</p>
 
-    <p class="text-center ">
-        Das A-Team (Originaltitel: The A-Team) ist eine Actionserie aus den Vereinigten Staaten von Stephen J. Cannell und Frank Lupo. Sie wurde von 1983 bis 1987 produziert und gehört zu den erfolgreichsten amerikanischen Fernsehsendungen dieses Zeitraums.[1]
-        Die Fernsehserie handelt von einer Gruppe ehemaliger Soldaten, die Menschen in Notlagen hilft – dabei aber selbst von der Militärpolizei gejagt wird.</p>
+        <p class="text-center ">
+            Das A-Team (Originaltitel: The A-Team) ist eine Actionserie aus den Vereinigten Staaten von Stephen J. Cannell und Frank Lupo. Sie wurde von 1983 bis 1987 produziert und gehört zu den erfolgreichsten amerikanischen Fernsehsendungen dieses Zeitraums.[1]
+            Die Fernsehserie handelt von einer Gruppe ehemaliger Soldaten, die Menschen in Notlagen hilft – dabei aber selbst von der Militärpolizei gejagt wird.</p>
+    </div>
 </div>
 
 <div id="footer-placeholder"></div>
+
 </body>
 </html>
