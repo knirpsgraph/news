@@ -74,7 +74,7 @@ function addNews(req: express.Request, res: express.Response):void {
 
 function getNews(req: express.Request, res: express.Response):void {
 
-    const query: string ="Select header, username, text, DATE_FORMAT (date, '%e.%c.%Y %H:%i') date FROM news ORDER BY date DESC;";
+    const query: string ="Select header, username, text, DATE_FORMAT(date, '%e.%c.%Y %H:%i') FROM news ORDER BY date DESC;";
 
     connection.query(query, (err: mysql.MysqlError | null, rows: any) => {
         if (err === null) {
